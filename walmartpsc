@@ -7,7 +7,7 @@ def mavenHome = tool name: "maven3.6.3"
 
  stage('CheckoutCode')
  {
- git branch: 'development', credentialsId: '0fc2b8fe-0aa8-4d3d-be77-60b219ade16c', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
+ git branch: 'development', credentialsId: '58154529-75fa-4ae8-8cbb-a2f670fbad9d', url: 'https://github.com/ECE-4th-year-project/maven-web-application.git'
  }
 
  stage('Build')
@@ -29,8 +29,8 @@ def mavenHome = tool name: "maven3.6.3"
 
  stage('DeployappIntoTomcatServer')
  {
- sshagent(['cb97b0ad-6067-42a4-a9c7-4de4cce322e9']) {
-  sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@65.0.133.236:/opt/apache-tomcat-9.0.41/webapps/"  
+ sshagent(['bc4493a2-519c-4926-b84a-da034e922a67']) {
+  sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@35.154.37.157/:/opt/apache-tomcat-9.0.54/webapps/"  
  }
  }
   */
@@ -40,7 +40,7 @@ def mavenHome = tool name: "maven3.6.3"
 
  Regards,
  Mithun Technologies,
- 9980923226''', cc: 'devopstrainingblr@gmail.com', from: '', replyTo: '', subject: 'Build Over...', to: 'devopstrainingblr@gmail.com'
+ 9980923226''', cc: 'devopstrainingblr@gmail.com', from: '', replyTo: '', subject: 'Build Over...', to: 'sreeharireddy536@gmail.com'
  }
  
  
